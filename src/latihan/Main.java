@@ -1,16 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package latihan;
 
-/**
- *
- * @author ridho
- */
+import java.util.Scanner;
+
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Hello");
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Silahkan masukkan angka: ");
+        int a = in.nextInt();
+        Ang_Hrf o = new Ang_Hrf(a);
+
+        System.out.print("Output: ");
+        o.getSatuan();
+        o.getBelasan();
+        o.getPuluhan();
+        o.getRatusan();
+
+        System.out.print("\n\nSilahkan masukkan terbilang angka: ");
+        in.nextLine();
+        String s = in.nextLine();
+        
+        System.out.print("Output: ");
+        Hrf_Ang p = new Hrf_Ang(s);
+        p.satuan();
+        p.belasan();
+        p.puluhan();
+        p.ratusan();
     }
 }
